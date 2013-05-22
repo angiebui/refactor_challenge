@@ -1,0 +1,10 @@
+<%= form_for @todo do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br>
+  <%= f.label :body %><br>
+  <%= f.text_area :body %><br>
+  <%= f.select :status, [:incomplete, :complete, :in_progress, :moved, :deleted, :postponed, :important], selected: @status %><br>
+  <%= f.label :list_id %><br>
+  <%= f.text_field :list_id %><br>
+  <%= f.submit %>
+<% end %>

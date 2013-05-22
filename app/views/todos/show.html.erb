@@ -1,0 +1,9 @@
+<h2>List Name: <%= @todo.list.name %></h2>
+<p> Task #<%= @todo.todo_count %></p>
+<ul>
+  <li><strong>Title:</strong> <%= @todo.title %></li>
+  <li><strong>Body:</strong> <%= @todo.body %></li>
+</ul>
+
+<%= link_to "edit", edit_todo_path(@todo) %>
+<%= link_to "home", root_path%>

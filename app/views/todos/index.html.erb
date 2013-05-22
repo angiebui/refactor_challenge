@@ -1,0 +1,14 @@
+<%= link_to "new todo",  new_todo_path %>
+
+<% @lists.each do |list| %>
+  <h2><%= list.name %></h2>
+  <% list.todos.each_with_index do |todo, index| %>
+    <p><%= index + 1 %>. <%= link_to "#{todo.title}", edit_todo_path(todo) %></p>
+    <p>Body: <%= todo.body %></p>
+  <% end %>
+<% end %>
+
+
+
+
+
